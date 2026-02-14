@@ -2,7 +2,7 @@ const express = require('express');
 const axios = require("axios");
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4000;
 
 app.get("/", (req, res) => {
   res.send("Bot aktif ve Render üzerinde çalışıyor!");
@@ -20,7 +20,7 @@ if (!token || !channelId || !message) {
     console.error("HATA: Environment (gizli değişkenler) bölümünde TOKEN, CHANNEL_ID veya MESSAGE eksik!");
 } else {
   
-    setInterval(sendMessage, 5000);
+    setInterval(sendMessage, 10000);
 }
 
 function sendMessage() {
